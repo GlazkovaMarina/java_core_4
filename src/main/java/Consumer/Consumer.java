@@ -13,6 +13,7 @@ public class Consumer {
     private String fathersName;
     private LocalDate birthday;
     private String number;
+    private Sex sex;
 
     @Override
     public String toString() {
@@ -20,16 +21,18 @@ public class Consumer {
                 "lastName='" + lastName + '\'' +
                 ", firstName='" + firstName + '\'' +
                 ", fathersName='" + fathersName + '\'' +
+                ", sex='" + sex + '\'' +
                 ", birthday=" + birthday +
                 ", age=" + getAge().toString() +
                 ", number='" + number + '\'' +
                 '}';
     }
 
-    public Consumer(String lastName, String firstName, String fathersName, String birthday, String number) {
+    public Consumer(String lastName, String firstName, String fathersName, Sex sex, String birthday, String number) {
         this.lastName = lastName;
         this.firstName = firstName;
         this.fathersName = fathersName;
+        this.sex = sex;
         this.birthday = LocalDate.parse(birthday);;
         this.number = number;
     }
