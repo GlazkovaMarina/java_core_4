@@ -1,3 +1,5 @@
+package Consumer;
+
 public class CustomerException extends RuntimeException{
     public CustomerException(){
         super();

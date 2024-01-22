@@ -1,6 +1,12 @@
+package Consumer;
+
 import java.time.LocalDate;
 import java.time.Period;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+@AllArgsConstructor
+@Data
 public class Consumer {
     private String lastName;
     private String firstName;
@@ -28,42 +34,8 @@ public class Consumer {
         this.number = number;
     }
 
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    public String getFathersName() {
-        return fathersName;
-    }
-
-    public void setFathersName(String fathersName) {
-        this.fathersName = fathersName;
-    }
-
-    public LocalDate getBirthday() {
-        return birthday;
-    }
     public Integer getAge() {
         return Period.between(birthday, LocalDate.now()).getYears();
     }
 
-    public String getNumber() {
-        return number;
-    }
-
-    public void setNumber(String number) {
-        this.number = number;
-    }
 }

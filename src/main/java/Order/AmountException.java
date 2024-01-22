@@ -1,3 +1,5 @@
+package Order;
+
 public class AmountException extends RuntimeException{
     public AmountException(){
         super();
